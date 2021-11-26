@@ -14,6 +14,7 @@ img{
 }
 
 .container{
+    height: 400px;
     width: 80%;
     margin: auto;
     display: flex;
@@ -37,8 +38,8 @@ main{
     position: relative;
 }
 
-#showcase .item-img{
-    height: 100%;
+#showcase img{
+    height: 400px;
 }
 
 #showcase .text-box{
@@ -66,6 +67,7 @@ main{
 
 /* LIBRARY */
 #library{
+    height: 400px;
     width: 15%;
     position: relative;
     background-color: black;
@@ -85,6 +87,7 @@ main{
 
 #library img{
     display: block;
+    height: calc(400px / 5);
 }
 
 #library .active{
