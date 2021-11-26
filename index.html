@@ -42,18 +42,17 @@
         <div id="library">
           <div v-for="(el, i) in elements" class="small-element">
             <!-- Immagini -->
-            <div id=" img-box">
+            <div class="img-box" :class="i == indexFocus ? 'active' : '' " @click="indexFocus = i">
               <img :src="el.image" alt="el.title">
             </div>
-
-            <!-- Freccia su -->
-            <div id="su" class="arrow-up" @click="goUp()">
-              <i class="fas fa-chevron-up"></i>
-            </div>
-            <!-- Freccia giù -->
-            <div id="giu" class="arrow-down" @click="goDown()">
-              <i class="fas fa-chevron-down"></i>
-            </div>
+          </div>
+          <!-- Freccia su -->
+          <div id="su" class="arrow-up" @click="goUp()">
+            <i class="fas fa-chevron-up"></i>
+          </div>
+          <!-- Freccia giù -->
+          <div id="giu" class="arrow-down" @click="goDown()">
+            <i class="fas fa-chevron-down"></i>
           </div>
         </div>
       </div>

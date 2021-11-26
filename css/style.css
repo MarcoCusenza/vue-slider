@@ -5,6 +5,7 @@
     box-sizing: border-box;
     color: white;
     font-family: 'Lato', sans-serif;
+    user-select: none;
 }
 
 img{
@@ -40,6 +41,7 @@ main{
 
 #showcase img{
     height: 400px;
+    display: block;
 }
 
 #showcase .text-box{
@@ -70,27 +72,23 @@ main{
     height: 400px;
     width: 15%;
     position: relative;
-    background-color: black;
 }
 
-#img-box{
+#library .img-box{
     height: 100%;
+    opacity: .4;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
 
-#library .item-mini{
-    opacity: .4;
-    min-height: calc(100% / 5);
-}
-
 #library img{
     display: block;
-    height: calc(400px / 5);
+    height: calc(396px / 5);
+    
 }
 
-#library .active{
+#library .img-box.active{
     opacity: 1;
     border: 2px solid lightgray;
 }
