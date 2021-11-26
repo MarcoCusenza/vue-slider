@@ -29,10 +29,6 @@ main{
     align-items: center;
     background-color:rgb(40, 40, 40);
 }
-
-#showcase, #library{
-    height: 400px;
-}
 /* /MAIN COMMONS */
 
 /* SHOWCASE */
@@ -43,7 +39,6 @@ main{
 
 #showcase .item-img{
     height: 100%;
-    display: none;
 }
 
 #showcase .text-box{
@@ -52,7 +47,6 @@ main{
     right: 3%;
     text-align: end;
     max-width: 50%;
-    display: none;
 }
 
 #showcase .text-box h2{

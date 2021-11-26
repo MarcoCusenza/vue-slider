@@ -27,29 +27,33 @@
         <!-- Showcase container-->
         <div id="showcase">
           <!-- Elemento immagine grande -->
-          <div v-for="(el, i) in elements" class="big-element">
+          <div v-for="(el, i) in elements" class="big-element" v-show="isActive(i)">
             <div class="item-img">
               <img :src="el.image" :alt="el.title">
             </div>
             <div class="text-box item-text">
               <h2>{{el.title}}</h2>
-              <p>${text[i]}</p>
+              <p>{{el.subtitle}}</p>
             </div>
           </div>
         </div>
 
         <!-- Library -->
         <div id="library">
-          <!-- Immagini -->
-          <div id="img-box"></div>
+          <div v-for="(el, i) in elements" class="small-element">
+            <!-- Immagini -->
+            <div id=" img-box">
+              <img :src="el.image" alt="el.title">
+            </div>
 
-          <!-- Freccia su -->
-          <div id="su" class="arrow-up">
-            <i class="fas fa-chevron-up"></i>
-          </div>
-          <!-- Freccia giù -->
-          <div id="giu" class="arrow-down">
-            <i class="fas fa-chevron-down"></i>
+            <!-- Freccia su -->
+            <div id="su" class="arrow-up" @click="goUp()">
+              <i class="fas fa-chevron-up"></i>
+            </div>
+            <!-- Freccia giù -->
+            <div id="giu" class="arrow-down" @click="goDown()">
+              <i class="fas fa-chevron-down"></i>
+            </div>
           </div>
         </div>
       </div>

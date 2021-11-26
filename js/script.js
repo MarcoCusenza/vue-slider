@@ -12,27 +12,53 @@ const app = new Vue({
       {
         image: "img/02.jpg",
         title: "Svizzera",
-        subtitle: "Che bella la Svizzera"
+        subtitle: "Che bella la Svizzera",
       },
       {
         image: "img/03.jpg",
         title: "Gran Bretagna",
-        subtitle: "Che bella la Gran Bretagna"
+        subtitle: "Che bella la Gran Bretagna",
       },
       {
         image: "img/04.jpg",
         title: "Germania",
-        subtitle: "Che bella la Germania"
+        subtitle: "Che bella la Germania",
       },
       {
         image: "img/05.jpg",
         title: "Paradise",
-        subtitle: "Che bella la Paradise"
+        subtitle: "Che bella la Paradise",
       },
     ],
+    // PROPRIETA
+    indexFocus: 0,
   },
   methods: {
+    isActive: function (i) {
+      if (this.indexFocus == i) {
+        return true;
+      }
+      return false;
+    },
 
+    goUp: function () {
+      if (this.indexFocus > 0) {
+        this.indexFocus--;
+
+      } else {
+        this.indexFocus = this.elements.length - 1;
+
+      }
+    },
+
+    goDown: function () {
+      if (this.indexFocus < this.elements.length - 1) {
+        this.indexFocus++;
+
+      } else {
+        this.indexFocus = 0;
+      }
+    },
   },
 });
 
