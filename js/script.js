@@ -61,10 +61,14 @@ const app = new Vue({
         app.goDown();
       }, 1000);
     },
+
+    blockCicloActive: function () {
+      clearInterval(this.autoPlay);
+    },
   },
 
   created: function () {
     this.cicloActive();
-  }
+  },
 });
 
